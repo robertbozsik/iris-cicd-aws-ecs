@@ -1,3 +1,6 @@
+# a simple test before production
+# here would be all the automated tests of the app
+
 def calc(x, y):
     return x + y
 

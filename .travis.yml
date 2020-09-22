@@ -1,0 +1,27 @@
+# It executes the Docker image
+
+language: python
+sudo: true
+
+python:
+  - "3.8"
+
+services:
+  - docker
+
+before_script:
+  - pip install docker-compose
+  - pip install coveralls
+
+script:
+  - docker-compose run app sh -c "pytest test.py"
+
+after_succes:
+  - coveralls
+
+deploy:
+  provider: script
+  skip-cleanup: true
+  script: bash ci/travis-deploy.sh
+  on:
+    branch: master

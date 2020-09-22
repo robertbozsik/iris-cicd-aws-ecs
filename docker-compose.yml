@@ -1,0 +1,11 @@
+# This will execute the docker image and pushes to DockerHub (= the GitHub of docker images)
+
+version: "3.8"
+
+services:
+  app:
+    build: .
+    command: sh -c "python app.py"
+    image: robertbozsik/iris-web-app:latest
+    ports:
+      - "80:8000"
