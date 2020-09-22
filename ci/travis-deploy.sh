@@ -18,5 +18,4 @@ aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
 aws configure set region $AWS_DEFAULT_REGION
 
 # Update service -> this line of code is where everything is deployed to aws
-# the number 2 should have been updated to 3 after Cluster and Container
-aws ecs update-service --cluster CICD-Cluster3 --service CICD-Container3-service --force-new-deployment
+aws ecs update-service --cluster iris-web-app-cluster1 --service iris-web-app-container1-service --force-new-deployment
