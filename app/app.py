@@ -5,15 +5,15 @@ from ml_model import iris_prediction
 app = Flask(__name__)
 
 
-@app.route('/iris', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def ml_model_function():
 
     if request.method == 'POST':
 
-        sepal_length = request.form['sepal_length']
-        sepal_width = request.form['sepal_width']
-        petal_length = request.form['petal_length']
-        petal_width = request.form['petal_width']
+        sepal_length = float(request.form['sepal_length'])
+        sepal_width = float(request.form['sepal_width'])
+        petal_length = float(request.form['petal_length'])
+        petal_width = float(request.form['petal_width'])
 
         prediction = iris_prediction(
             sepal_length, sepal_width, petal_length, petal_width)
@@ -24,4 +24,4 @@ def ml_model_function():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000)

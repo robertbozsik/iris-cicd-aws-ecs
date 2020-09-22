@@ -14,15 +14,25 @@ h1 {
   color: #1c87c9;
 }
 
-/* this h2 style does NOT work */
 h2 {
   margin: 0 0 20px;
-  font-weight: 300;
-  color: #1c87c9;
+  font-weight: 500;
+  color: rgb(61, 60, 60);
+}
+
+h3 {
+  margin: 0 0 20px;
+  font-weight: 500;
+  color: white;
 }
 
 p {
   margin: 0 0 5px;
+  color: white;
+}
+
+a {
+  color: white;
 }
 
 .main-block {
@@ -34,26 +44,21 @@ p {
   background: #1c87c9;
 }
 
+.left-part {
+  padding: 25px;
+  margin: 25px;
+}
+
+img {
+  margin: 20px 5px;
+  max-height: 70px;
+}
+
 form {
   padding: 25px;
   margin: 25px;
   box-shadow: 0 2px 5px #f5f5f5;
   background: #f5f5f5;
-}
-
-.fas {
-  margin: 25px 10px 0;
-  font-size: 72px;
-  color: #fff;
-}
-
-.fa-envelope {
-  transform: rotate(-20deg);
-}
-
-.fa-at,
-.fa-mail-bulk {
-  transform: rotate(10deg);
 }
 
 input,
@@ -83,24 +88,15 @@ button:hover {
   background: #2371a0;
 }
 
+/* iPhone 5/SE: 320x568 */
+/* iPhone Plus: 414x736 */
 @media (min-width: 568px) {
   .main-block {
     flex-direction: row;
   }
+
   .left-part,
   form {
     width: 50%;
-  }
-  .fa-envelope {
-    margin-top: 0;
-    margin-left: 20%;
-  }
-  .fa-at {
-    margin-top: -10%;
-    margin-left: 65%;
-  }
-  .fa-mail-bulk {
-    margin-top: 2%;
-    margin-left: 28%;
   }
 }
