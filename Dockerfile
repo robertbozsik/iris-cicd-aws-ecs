@@ -14,8 +14,8 @@ WORKDIR /app
 COPY ./app /app
 
 # Creating and logging a user
-RUN adduser -D user
-USER user
+# RUN adduser -D user
+# USER user
 
 # Commands for Docker run
 EXPOSE 8000
