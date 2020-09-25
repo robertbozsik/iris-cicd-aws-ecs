@@ -45,13 +45,17 @@ a {
 }
 
 .left-part {
-  padding: 25px;
+  /* padding: 25px; */
   margin: 25px;
 }
 
 img {
   margin: 20px 5px;
-  max-height: 70px;
+  max-height: 60px;
+}
+
+#aws-logo {
+  height: 45px;
 }
 
 form {
